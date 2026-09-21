@@ -30,7 +30,6 @@ CREATE TABLE passenger (
     updated_at TIMESTAMP WITHOUT TIME ZONE
 );
 
--- 2. Таблица рейсов
 CREATE TABLE flight (
     flight_id SERIAL PRIMARY KEY,
     airline_id INTEGER REFERENCES airline(airline_id),
@@ -46,7 +45,6 @@ CREATE TABLE flight (
     updated_at TIMESTAMP WITHOUT TIME ZONE
 );
 
--- 3. Таблица бронирований
 CREATE TABLE booking (
     booking_id SERIAL PRIMARY KEY,
     flight_id INTEGER REFERENCES flight(flight_id),
